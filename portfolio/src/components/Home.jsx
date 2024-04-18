@@ -48,7 +48,7 @@ const Home = ({ ratio }) => {
       <section>
         <div>
           <motion.h1 {...animations.h1}>
-            Hi, I Am <br /> Anshu Kumar...
+            Hi, I Am <br /> Abhishek Singh
           </motion.h1>
 
           <Typewriter
@@ -62,22 +62,50 @@ const Home = ({ ratio }) => {
           />
 
           <div>
-            <a href="mailto:anshuu424@gmail.com">Hire Me</a>
+            <a href="mailto:official.6packprogrammer@gmail.com">Hire Me</a>
             <a href="#work">
               Projects <BsArrowUpRight />
             </a>
           </div>
 
+          <article>
+            <p>
+              +
+              {ratio < 2 && (
+                <motion.span
+                  whileInView={animationClientsCount}
+                  ref={clientCount}
+                ></motion.span>
+              )}
+            </p>
+            <span>Clients Worldwide</span>
+          </article>
+
           <aside>
+            <article>
+              <p>
+                +
+                {ratio < 2 && (
+                  <motion.span
+                    ref={projectCount}
+                    whileInView={animationProjectsCount}
+                  >
+                    500
+                  </motion.span>
+                )}
+              </p>
+              <span>Projects Done</span>
+            </article>
+
             <article data-special>
               <p>Contact</p>
-              <span>anshuu424@gmail.com</span>
+              <span>official.6packprogrammer@gmail.com</span>
             </article>
           </aside>
         </div>
       </section>
       <section>
-        <img src={me} alt="anshu" />
+        <img src={me} alt="Abhishek" />
       </section>
       <BsChevronDown />
     </div>
